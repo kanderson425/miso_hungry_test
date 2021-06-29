@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT:400i|Rubik" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css"/>
+    
+    <!-- FONT AWESOME IMPORT  --> 
+    <script
+			src="https://kit.fontawesome.com/f78f1848e0.js"
+			crossorigin="anonymous"
+		></script>
+
+    <!-- GOOGLE FONT IMPORT  --> 
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chicle&display=swap');
+    </style>
+    <title>Miso Hungry</title>
+</head>
+<body>
+  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/index.html"><span class="miso">Miso</span> <span class="hungry">Hungry</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"  aria-expanded="false">
+              <img src="/assets/images/jimi-filipovski-sHG1dCUXgPY-unsplash.jpg" width="40" height="40" class="rounded-circle">
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/myaccount">My account</a></li>
+              <li><a class="dropdown-item" href="/login">Log out</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav> -->
+
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/index.html"><span class="miso">Miso</span> <span class="hungry">Hungry</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"  aria-expanded="false">
+              <img src="/assets/images/jimi-filipovski-sHG1dCUXgPY-unsplash.jpg" width="40" height="40" class="rounded-circle">
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/myaccount">My account</a></li>
+              <li><a class="dropdown-item" href="/login">Log out</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <div class="jumbotron homeJumbo"> 
+      <img src="/assets/images/brenan-greene-HPZs4EXRFSU-unsplash.jpg" class="img-r img-fluid">
+    </div>
+
+
+
+  <div class="container my-4 categoryOptions">
+    <div class="row">
+      <!-- RECIPE CATEGORIES -->
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn catBtn" name="category" value="main%20course">main course</button>
+        <button type="button" class="btn catBtn" name="category" value="side%20dish">side dish</button>
+        <button type="button" class="btn catBtn" name="category" value="appetizer">appetizer</button>
+        <button type="button" class="btn catBtn" name="category" value="salad">salad</button>
+        <button type="button" class="btn catBtn" name="category" value="dessert">dessert</button>
+        <form class="d-flex search-form">
+          <input class="form-control me-2 searchField" type="search" placeholder="Search" aria-label="recipe search" id="recipe-search">
+            <button class="btn btn-outline-success searchBtn" type="button" id="search-btn">Search</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- RECIPE SEARCH -->
+  <!-- <form class="d-flex search-form">
+    <input class="form-control me-2 searchField" type="search" placeholder="Search" aria-label="recipe search" id="recipe-search">
+      <button class="btn btn-outline-success searchBtn" type="button" id="search-btn">Search</button>
+    </form> -->
+<!-- RECIPE CARDS -->
+    <div class="container recipeList">
+      <div class="row">
+        <div class="col-sm-4 my-4">
+          <div class="card" style="width: 18rem;" id="recipeContainer">
+            <img src="/assets/images/prudence-earl-NM1eTOwEz7A-unsplash.jpg" class="card-img-top recipeImg" alt="...">
+            <div class="card-body text-center">
+              <p class="categoryTag">{{category}}</p>
+              <p class="card-text recipeTitle fs-3">{{}}</p>
+              <button class="btn seeRecipe text-uppercase" type="button">View recipe</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 my-4">
+          <div class="card" style="width: 18rem;" id="recipeContainer">
+            <img src="/assets/images/mike-meeks-zk-fclJdGas-unsplash.jpg" class="card-img-top recipeImg" alt="...">
+            <div class="card-body text-center">
+              <p class="categoryTag">{{category}}</p>
+              <p class="card-text recipeTitle fs-3">Meatloaf pie</p>
+              <button class="btn seeRecipe text-uppercase" type="button">View recipe</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 my-4">
+          <div class="card" style="width: 18rem;" id="recipeContainer">
+            <img src="./assets/images/spencer-davis-vJsj-hgOEG0-unsplash.jpg" class="card-img-top recipeImg" alt="...">
+            <div class="card-body text-center">
+              <p class="categoryTag">{{category}}</p>
+              <p class="card-text recipeTitle fs-3">Meatloaf pie</p>
+              <button class="btn seeRecipe text-uppercase" type="button">View recipe</button>
+            </div>
+          </div>
+        </div>        <div class="col-sm-4 my-4">
+          <div class="card" style="width: 18rem;" id="recipeContainer">
+            <img src="/assets/images/frank-zhang-rioTUXsDImc-unsplash.jpg" class="card-img-top recipeImg" alt="...">
+            <div class="card-body text-center">
+              <p class="categoryTag">{{category}}</p>
+              <p class="card-text recipeTitle fs-3">Meatloaf pie</p>
+              <button class="btn seeRecipe text-uppercase" type="button">View recipe</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 my-4">
+          <div class="card" style="width: 18rem;" id="recipeContainer">
+            <img src="/assets/images/jimi-filipovski-sHG1dCUXgPY-unsplash.jpg" class="card-img-top recipeImg" alt="...">
+            <div class="card-body text-center">
+              <p class="categoryTag">{{category}}</p>
+              <p class="card-text recipeTitle fs-3">Meatloaf pie</p>
+              <button class="btn seeRecipe text-uppercase" type="button">View recipe</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 my-4">
+          <div class="card" style="width: 18rem;" id="recipeContainer">
+            <img src="/assets/images/naufal-muhammad-haiqal-kRRByxhqZtY-unsplash.jpg" class="card-img-top recipeImg" alt="...">
+            <div class="card-body text-center">
+              <p class="categoryTag">{{category}}</p>
+              <p class="card-text recipeTitle fs-3">Meatloaf pie</p>
+              <button class="btn seeRecipe text-uppercase" type="button">View recipe</button>
+            </div>
+          </div>
+        </div>
+        
+        
+          <!-- FOOD CATEGORIES -->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4 align-middle">
+        <p class="casseroleText text-center fs-3"><span class="align-middle">Pizza Mac n Cheese</span></p>
+        <div class="ingredients">
+          <div class="ingrediensHeader">
+            <div class="ingTitle">
+              Ingredients
+            </div>
+            <div class="ingNeeded container">
+              <div class="ingItem row">
+                <div class="col">
+                <span class="amount">
+                  2Tbs
+                </span>
+                <span class="ingDescription">
+                  Oregano
+                </span>
+              </div>
+              <div class="ingItem">
+                <span class="amount">
+                  2Tbs
+                </span>
+                <span class="ingDescription">
+                  Oregano
+                </span>
+              </div>
+              <div class="ingItem">
+                <span class="amount">
+                  2Tbs
+                </span>
+                <span class="ingDescription">
+                  Oregano
+                </span>
+              </div>
+              <div class="ingItem">
+                <span class="amount">
+                  2Tbs
+                </span>
+                <span class="ingDescription">
+                  Oregano
+                </span>
+              </div>
+              <div class="ingItem">
+                <span class="amount">
+                  2Tbs
+                </span>
+                <span class="ingDescription">
+                  Oregano
+                </span>
+              </div>
+            </div>
+          </div>
+            <div class="ingNeeded container">
+              <div class="ingItem row">
+                <div class="col"></div>
+                <span class="amount">
+                  2Tbs
+                </span>
+                <span class="ingDescription">
+                  Oregano
+                </span>
+              </div>
+              <div class="ingItem">
+                <span class="amount">
+                  2Tbs
+                </span>
+                <span class="ingDescription">
+                  Oregano
+                </span>
+              </div>
+              <div class="ingItem">
+                <span class="amount">
+                  2Tbs
+                </span>
+                <span class="ingDescription">
+                  Oregano
+                </span>
+              </div>
+              <div class="ingItem">
+                <span class="amount">
+                  2Tbs
+                </span>
+                <span class="ingDescription">
+                  Oregano
+                </span>
+              </div>
+              <div class="ingItem">
+                <span class="amount">
+                  2Tbs
+                </span>
+                <span class="ingDescription">
+                  Oregano
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="directions">
+          <div class="directionHeader">
+            <div class="directionTitle">
+              Directions
+            </div>
+          <div class="directionsBody">
+            <div class="directionsection section1">
+              <div class="directionList">
+                <ol>
+                  <li>Shred sharp cheddar</li>
+                  <li>Make the roux</li>
+                  <li>Make the sauce</li>
+                  <li>Make the sauce</li>
+                  <li>Make the sauce</li>
+                  <li>Make the sauce</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="col-sm-8">
+        <img src="/assets/images/sheri-silver-q5C-_coAZR4-unsplash.jpg" alt="" class="img-fluid" width="1000" height="500" >
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-4 my-4">
+    <div class="card" style="width: 18rem;" id="recipeContainer">
+      <img src="/assets/images/prudence-earl-NM1eTOwEz7A-unsplash.jpg" class="card-img-top recipeImg" alt="...">
+      <div class="card-body text-center">
+        <p class="categoryTag">{{category}}</p>
+        <p class="card-text recipeTitle fs-3">Meatloaf pie</p>
+        <button class="btn seeRecipe text-uppercase" type="button">View recipe</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 my-4">
+    <div class="card" style="width: 18rem;" id="recipeContainer">
+      <img src="/assets/images/mike-meeks-zk-fclJdGas-unsplash.jpg" class="card-img-top recipeImg" alt="...">
+      <div class="card-body text-center">
+        <p class="categoryTag">{{category}}</p>
+        <p class="card-text recipeTitle fs-3">Meatloaf pie</p>
+        <button class="btn seeRecipe text-uppercase" type="button">View recipe</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 my-4">
+    <div class="card" style="width: 18rem;" id="recipeContainer">
+      <img src="./assets/images/spencer-davis-vJsj-hgOEG0-unsplash.jpg" class="card-img-top recipeImg" alt="...">
+      <div class="card-body text-center">
+        <p class="categoryTag">{{category}}</p>
+        <p class="card-text recipeTitle fs-3">Meatloaf pie</p>
+        <button class="btn seeRecipe text-uppercase" type="button">View recipe</button>
+      </div>
+    </div>
+        </div>
+
+        <div class="col-sm-4 my-4">
+          <div class="card" style="width: 18rem;" id="recipeContainer">
+            <img src="/assets/images/prudence-earl-NM1eTOwEz7A-unsplash.jpg" class="card-img-top recipeImg" alt="...">
+            <div class="card-body text-center">
+              <p class="categoryTag">{{category}}</p>
+              <p class="card-text recipeTitle fs-3">Meatloaf pie</p>
+              <button class="btn seeRecipe text-uppercase" type="button">View recipe</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 my-4">
+          <div class="card" style="width: 18rem;" id="recipeContainer">
+            <img src="/assets/images/mike-meeks-zk-fclJdGas-unsplash.jpg" class="card-img-top recipeImg" alt="...">
+            <div class="card-body text-center">
+              <p class="categoryTag">{{category}}</p>
+              <p class="card-text recipeTitle fs-3">Meatloaf pie</p>
+              <button class="btn seeRecipe text-uppercase" type="button">View recipe</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 my-4">
+          <div class="card" style="width: 18rem;" id="recipeContainer">
+            <img src="./assets/images/spencer-davis-vJsj-hgOEG0-unsplash.jpg" class="card-img-top recipeImg" alt="...">
+            <div class="card-body text-center">
+              <p class="categoryTag">{{category}}</p>
+              <p class="card-text recipeTitle fs-3">Meatloaf pie</p>
+              <button class="btn seeRecipe text-uppercase" type="button">View recipe</button>
+            </div>
+          </div>
+
+          </div>
+        </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+     <!-- FOOTER -->
+     <footer class="blockquote-footer">
+       
+     </blockquote>">
+      <div class="prefooter pt-2">
+        <div class="row text-center">
+          <div class="col-4 fw-bold">SITE MAP</div>
+          <div class="col-4 fw-bold">HELPFUL LINKS</div>
+          <div class="col-4 fw-bold">COMMUNITY</div>
+        </div>
+        <div class="row text-center">
+          <div class="col-4 footsm"><a class="sm" href="/signup.html">Sign up</a></div>
+          <div class="col-4 footsm"><a class="sm" href="#">Terms and Conditions</a></div>
+          <div class="col-4 footsm"><a class="sm" href="#">Local produce</a></div>
+        </div>
+        <div class="row text-center">
+          <div class="col-4 footsm"><a class="sm" href="/login.html">Log in</a></div>
+          <div class="col-4 footsm"><a class="sm" href="#">Help</a></div>
+          <div class="col-4 footsm"><a class="sm" href="#">Give Back</a></div>
+        </div>
+        <div class="row text-center">
+          <div class="col-4 footsm"><a class="sm" href="#">About Us</a></div>
+          <div class="col-4 footsm"><a class="sm" href="#">Contact us</a></div>
+          <div class="col-4 footsm"></div>
+        </div>
+      </div>
+
+        <div class="content has-text-centered py-2 prefooter">
+          <div class="row text-center">
+            <div class="col-12">
+              <a class="sm px-2" href="https://twitter.com/?lang=en" target="_blank"><i class="fab fa-twitter socialMedia"></i></a>
+              <a class="sm px-2" href="https://www.pinterest.com/" target="_blank"><i class="fab fa-pinterest-p socialMedia"></i></a>
+              <a class="sm px-2" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square socialMedia"></i></a>
+              <a class="sm px-2" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram socialMedia"></i></a>
+              <!-- <p class="connect footsm">connect with us</p> -->
+            </div>
+          </div>
+      </div>
+
+      <div class="bottomFooter pt-2">
+        <div class="content has-text-centered footerThanks">
+          <div class="row text-center">
+            <div class="col-12 footsm">
+              <p>Special thanks to: Rebecca N. | Ronnie R. | Byrant U. | Mimi V.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+      <script src="assets/js/signup.js"></script>
+    <!-- BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>

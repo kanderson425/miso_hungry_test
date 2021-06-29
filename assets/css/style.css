@@ -1,0 +1,509 @@
+/* GLOBAL */ 
+* {
+    font-family: 'Oswald', sans-serif;
+    margin: none;
+}
+
+:root {
+    --input-padding-x: 1rem;
+    --input-padding-y: .5rem;
+  }
+
+  body{
+    min-height: 100%;
+    height: 100%;
+  }
+
+/* SIGNUP/LOGIN PAGE */
+.banner {
+    width: 100%;
+    display: block;
+    background: #FFF24B;
+    border-bottom: 4px solid #E49600;
+}
+
+.categoryOptions {
+  background: #fff;
+}
+
+
+
+.bannerText {
+    display: block;
+    /* justify-content: center; */
+    animation: slide 8s linear infinite alternate;
+}
+
+@keyframes slide {
+    0% { color: black; }
+   25% { color: black; }
+   50% { color: black; }
+   75% { color: black; }
+  100% { transform: translateX(50%); color: black; }
+ }
+
+.jumbotron {
+    max-height: 600px;
+    overflow: hidden;
+    display: block;
+    text-align: center;
+    margin-bottom: none;
+}
+
+/* .jumbotron:hover {
+    transform: scale(1.1);
+} */
+
+.img-r {
+    width: 100%;
+    animation: shakeImg;
+    }
+
+.card {
+  border: 0 !important;
+}
+
+.jumbotron-light {
+    background:#fff !important;
+}
+
+hr {
+  color: #E49600;
+}
+.miso {
+    color: #E49600;
+    font-family: 'Lobster', cursive;
+    text-shadow: 3px 3px #fff;
+}
+
+.seeRecipe {
+  background: #FFF24B;
+  width: 50%;
+  font-size: 12px;
+}
+
+.categoryTag {
+  font-size: 8px;
+}
+
+.homeJumbo {
+ height: 350px;
+ display: block;
+ /* text-align: center; */
+ /* position: static; */
+ transform: translateY(-200);
+ margin-top: auto;
+ margin-bottom: auto;
+
+}
+/* body {
+  display:flex;flex-direction:column
+} */
+/* .signupBody{
+    background: #CDCCC0;
+}
+
+.loginBody {
+    background: #CDCCC0;
+} */
+
+.hungry {
+    color: #000;
+    font-family: 'Lobster', cursive;
+    text-shadow: 3px 3px #fff;
+}
+
+.hangryYou {
+    font-family: 'Bebas Neue', cursive;
+    /* font-family: 'Chicle', cursive; */
+}
+.navbar {
+    padding: 1rem 1rem;
+    max-height: 14vh;
+    background: #fff;
+}
+.navbar
+.navbar-brand {
+    color: #E49600 !important;
+    font-family: 'Lobster', cursive;
+    display: block;
+    font-size: 40px;
+}
+
+.steps{
+  font-family: 'Bebas Neue', cursive;
+}
+
+/* a {
+    color: #fff;
+} */
+
+.navbar-toggler {
+    background: #E49600;
+    border:none;
+    padding: 10px 6px;
+    outline: none;
+}
+
+.navbar-toggler span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border: 1px;
+    background: #fff;
+}
+
+.navbar-toggler span + span{
+    margin-top: 4px;
+    /* width: 18px; */
+    /* margin-left: 4px; */
+}
+/* .navbar-toggler span + span + span{
+    margin-top: 10px;
+    margin-left: 10px;
+} */
+
+.navbar-expand-lg .navbar-nav .nav-link {
+   /* padding: 2rem 1.2rem; */
+   font-size: 1.4rem;
+   position: relative;
+   color: #000;
+}
+
+
+/* .navbar-expand-lg .navbar-nav .nav-link:hover {
+    border-bottom: 3px solid #E49600;
+ } */
+ .navbar-expand-lg .navbar-nav .nav-link .homeNav:hover {
+  border-bottom: none;
+ }
+ 
+ .navbar-expand-lg .navbar-nav .nav-link:active {
+    border-bottom: 4px solid #E49600;
+    color: #E49600;
+ }
+ /* END NAV BAR STYLES */
+
+ /* SUBHEAD */ 
+.subhead1 {
+    width: 100%;
+    /* max-height: 700px; */
+    /* overflow: hidden; */
+    display: block;
+    /* text-align: center; */
+    background: #fff;
+}
+
+/* .subheadContent1 {
+ height: 500px;
+} */
+
+.bgLoginRow{
+    width: 100%;
+    display: block;
+    background: #fff;
+}
+
+.loginBg{
+    height: 550px;
+}
+
+.submit
+.enterCTA {
+    background: #FFF24B;
+    border-color: #FFF24B;
+    color: #000;
+}
+
+.noodles{
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+}
+
+
+
+.mainIMg{
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  right: -9999px;
+  bottom: -9999px;
+  margin: auto;
+}
+
+
+.noodles {
+  width: none !important;
+  background: #00E09D;
+  height: 450px;
+}
+
+.signUpBtn {
+    background: #000;
+    border-color: #000;
+    color: #fff;
+    font-size: 80%;
+    /* border-radius: 5rem; */
+    letter-spacing: .1rem;
+    font-weight: bold;
+    /* padding: 1rem; */
+    transition: all 0.2s;
+    padding-right: none ;
+}
+
+.signUpBtn:hover {
+    background: #E49600;
+    border-color: #E49600;
+}
+
+.btnSignUp {
+    padding-right: none !important;
+}
+
+.container
+.btnLogIn {
+    padding-right: none !important;
+}
+
+#upload_widget {
+    font-size: .65rem !important;
+}
+
+.upload {
+    border-color: #E49600;
+    color: #E49600;
+    border-radius: 5rem;
+}
+
+/* 
+.imgLoad {
+    border-radius: 5rem;
+} */
+
+.submit
+.enterCTA:hover {
+    background: #E49600;
+    border-color: #E49600;
+}
+
+
+.prefooter {
+
+    background: #1e211f;
+    /* border-top: 4px solid #E49600; */
+}
+
+a {
+text-decoration: none;
+}
+.sm {
+    color: #fff;
+}
+.sm:hover {
+    color: #E49600;
+}
+
+
+.card-signin {
+    border: 0;
+    /* border-radius: 1rem; */
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+  }
+  
+  .searchField {
+    border-radius: 5rem;
+  }
+
+  .searchBtn {
+    /* border-radius: 5rem; */
+    background: #000;
+    border-color: #000;
+    color: #fff;
+  }
+
+  .searchBtn:hover {
+    color: #fff;
+    background: #E49600;
+    border-color: #E49600;
+  }
+
+  .card-signin .card-title {
+    margin-bottom: 2rem;
+    font-weight: 300;
+    font-size: 1.5rem;
+  }
+  
+  .card-signin .card-body {
+    padding: 2rem;
+  }
+  
+  .login-form {
+    width: 100%;
+  }
+  
+  .login-form .btn {
+    font-size: 80%;
+    /* border-radius: 5rem; */
+    letter-spacing: .1rem;
+    font-weight: bold;
+    /* padding: 1rem; */
+    /* transition: all 0.2s; */
+  }
+
+  .login-form .btn:hover {
+    border-color: #E49600;
+    background: #E49600;
+  }
+  
+  .form-label-group {
+    position: relative;
+    margin-bottom: 1rem;
+  }
+  
+  .form-label-group input {
+    height: auto;
+    /* border-radius: 2rem; */
+  }
+  
+  .form-label-group>input,
+  .form-label-group>label {
+    padding: var(--input-padding-y) var(--input-padding-x);
+  }
+  
+  .form-label-group>label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+    /* Override default `<label>` margin */
+    line-height: 1.5;
+    color: #495057;
+    border: 1px solid transparent;
+    /* border-radius: .25rem; */
+    transition: all .1s ease-in-out;
+  }
+
+  .catBtn:hover {
+    border-bottom: 3px solid #E49600;
+  }
+  
+  .form-label-group input::-webkit-input-placeholder {
+    color: transparent;
+  }
+  
+  .form-label-group input:-ms-input-placeholder {
+    color: transparent;
+  }
+  
+  .form-label-group input::-ms-input-placeholder {
+    color: transparent;
+  }
+  
+  .form-label-group input::-moz-placeholder {
+    color: transparent;
+  }
+  
+  .form-label-group input::placeholder {
+    color: transparent;
+  }
+  
+  .steps {
+    color: #E49600;
+  }
+  
+  .form-label-group input:not(:placeholder-shown) {
+    padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
+    padding-bottom: calc(var(--input-padding-y) / 3);
+  }
+  
+  .form-label-group input:not(:placeholder-shown)~label {
+    padding-top: calc(var(--input-padding-y) / 3);
+    padding-bottom: calc(var(--input-padding-y) / 3);
+    font-size: 12px;
+    color: #777;
+  }
+
+  .createAccount {
+      color: #ea4335;
+  }
+  
+  .btn-google {
+    color: white;
+    background-color: #ea4335;
+  }
+  
+  .btn-facebook {
+    color: white;
+    background-color: #3b5998;
+  }
+  
+  /* Fallback for Edge
+  -------------------------------------------------- */
+  
+  @supports (-ms-ime-align: auto) {
+    .form-label-group>label {
+      display: none;
+    }
+    .form-label-group input::-ms-input-placeholder {
+      color: #777;
+    }
+  }
+  
+  /* Fallback for IE
+  -------------------------------------------------- */
+  
+  @media all and (-ms-high-contrast: none),
+  (-ms-high-contrast: active) {
+    .form-label-group>label {
+      display: none;
+    }
+    .form-label-group input:-ms-input-placeholder {
+      color: #777;
+    }
+  }
+
+
+  .signInCTA {
+    background: #000;
+    border-color: #000;
+    color: #fff;
+  }
+
+  .signInCTA
+
+/* HOMEPAGE */ 
+.recipeList {
+  margin-top: 50px
+}
+
+
+/* SHOPPING LIST */
+.strikethrough {
+    text-decoration: line-through;
+    opacity: .5
+}
+
+/* FOOTER */ 
+footer {
+    /* position: absolute; */
+    width: 100%;
+    padding-top: 10px;
+    color: #fff;
+    bottom: 0;
+    /* height: 2em; */
+    left: 0;
+    /* margin-top: -1000px; */
+}
+
+.bottomFooter{
+    background: #1e211f;
+    color: #fff;
+}
+
+.footsm {
+    font-size: 14px;
+}
